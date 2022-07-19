@@ -24,7 +24,7 @@ public static void main(String[] args) {
 		System.out.println("enter third value");
 		Integer third =sc.nextInt();
 		s1= new generics<Integer>(first,second,third);
-		s1.compare();
+		s1.max();
 		break;
 	}
 	
@@ -39,7 +39,7 @@ public static void main(String[] args) {
 		System.out.print(" Please enter the third value: ");
 		Float third = sc.nextFloat();
 		s1=new generics<Float>(first, second, third);
-		s1.compare();
+		s1.max();
 		break;
 	}
 		case 3:
@@ -53,12 +53,13 @@ public static void main(String[] args) {
 			System.out.print(" Please enter the third value: ");
 			String third = sc.next();
 			s1=new generics<String>(first, second, third);
-			s1.compare();
+			s1.max();
 			break;
 		}
 		default :
 			System.out.println("wrong choice");
 	}
 	}
+	
 }
 
