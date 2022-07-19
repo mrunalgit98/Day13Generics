@@ -5,18 +5,57 @@ import java.util.Scanner;
 public class Main {
 public static void main(String[] args) {
 	Scanner sc=new Scanner(System.in);
-	generics obj=new generics();
+	generics s1=new generics();
 	
-	System.out.println("enter first value");
-	String first=sc.next();
+	System.out.println("1.Integer\n 2.Float\n 3.String\n");
+	System.out.println("enter your choice");
+	int ch=sc.nextInt();
 	
-	System.out.println("enter second value");
-    String second=sc.next();
+	switch(ch) {
 	
-	System.out.println("enter third value");
-	String third=sc.next();
+	case 1:
+	{
+		System.out.println("enter first value");
+		Integer first =sc.nextInt();
+		
+		System.out.println("enter second value");
+		Integer second =sc.nextInt();
+		
+		System.out.println("enter third value");
+		Integer third =sc.nextInt();
+		s1.findMax(first,second,third);
+		break;
+	}
 	
-	obj.findMaxString(first, second, third);
-	
+	case 2:
+	{
+		System.out.print(" Please enter the first value: ");
+		Float first = sc.nextFloat();
+		
+		System.out.print(" Please enter the second value: ");
+		Float second = sc.nextFloat();
+		
+		System.out.print(" Please enter the third value: ");
+		Float third = sc.nextFloat();
+		s1.findMax(first, second, third);
+		break;
+	}
+		case 3:
+		{
+			System.out.print(" Please enter the first value: ");
+			String first = sc.next();
+			
+			System.out.print(" Please enter the second value: ");
+			String second = sc.next();
+			
+			System.out.print(" Please enter the third value: ");
+			String third = sc.next();
+			s1.findMax(first, second, third);
+			break;
+		}
+		default :
+			System.out.println("wrong choice");
+	}
+	}
 }
-}
+
