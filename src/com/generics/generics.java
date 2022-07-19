@@ -4,7 +4,7 @@ public class generics {
 
 	
 	
-	public void findMaxFloat(Float first,Float second,Float third) {
+	public void findMaxString(String first, String second, String third) {
 		if(first.compareTo(second) >= 0 && first.compareTo(third) >= 0) {
 			System.out.println(" First is largest ");
 		}
@@ -14,5 +14,6 @@ public class generics {
 		else
 			System.out.println(" Third is largest");
 	}
+
 	}
 
