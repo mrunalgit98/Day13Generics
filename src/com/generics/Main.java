@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 public static void main(String[] args) {
 	Scanner sc=new Scanner(System.in);
-	generics s1=new generics();
+	generics s1;
 	
 	System.out.println("1.Integer\n 2.Float\n 3.String\n");
 	System.out.println("enter your choice");
@@ -23,7 +23,8 @@ public static void main(String[] args) {
 		
 		System.out.println("enter third value");
 		Integer third =sc.nextInt();
-		s1.findMax(first,second,third);
+		s1= new generics<Integer>(first,second,third);
+		s1.compare();
 		break;
 	}
 	
@@ -37,7 +38,8 @@ public static void main(String[] args) {
 		
 		System.out.print(" Please enter the third value: ");
 		Float third = sc.nextFloat();
-		s1.findMax(first, second, third);
+		s1=new generics<Float>(first, second, third);
+		s1.compare();
 		break;
 	}
 		case 3:
@@ -50,7 +52,8 @@ public static void main(String[] args) {
 			
 			System.out.print(" Please enter the third value: ");
 			String third = sc.next();
-			s1.findMax(first, second, third);
+			s1=new generics<String>(first, second, third);
+			s1.compare();
 			break;
 		}
 		default :

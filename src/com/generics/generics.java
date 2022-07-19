@@ -1,52 +1,33 @@
 package com.generics;
 
-public class generics {
+
 
 	
-	
-	public void findMaxString(String first, String second, String third) {
-		if(first.compareTo(second) >= 0 && first.compareTo(third) >= 0) {
-			System.out.println(" First is largest ");
+	public class generics <T extends Comparable<T>>{
+		
+		
+		T first;
+		T second;
+		T third;
+		
+		public static <T extends Comparable<T>> void compare(T first,T second, T third) {
+			if(first.compareTo(second)>0 && first.compareTo(third)>0) {
+				System.out.println("First is largest");
+			}
+			else if(second.compareTo(first)>0 && second.compareTo(third)>0) {
+				System.out.println("Second is largest");
+			}
+			else
+				System.out.println("Third is largest");
 		}
-		else if(second.compareTo(first) >= 0 && second.compareTo(third) >= 0) {
-			System.out.println(" Second is largest");
+		public void compare() {
+			compare(this.first,this.second,this.third);
 		}
-		else
-			System.out.println(" Third is largest");
-	}
-
-	
-	public void findMaxInt(Integer first, Integer second, Integer third) {
-		if(first.compareTo(second) >= 0 && first.compareTo(third) >= 0) {
-			System.out.println(" First is largest ");
+		public generics(T first,T second,T third) {
+			
+			this.first=first;
+			this.second=second;
+			this.third=third;
 		}
-		else if(second.compareTo(first) >= 0 && second.compareTo(third) >= 0) {
-			System.out.println(" Second is largest");
-		}
-		else
-			System.out.println(" Third is largest");
-	}
-	
-	public void findMaxFloat(Float first, Float second, Float third) {
-		if(first.compareTo(second) >= 0 && first.compareTo(third) >= 0) {
-			System.out.println(" First is largest ");
-		}
-		else if(second.compareTo(first) >= 0 && second.compareTo(third) >= 0) {
-			System.out.println(" Second is largest");
-		}
-		else
-			System.out.println(" Third is largest");
-	}
-	
-	public <T extends Comparable<T>>void findMax(T first,T second,T third){
-		if(first.compareTo(second)>0 && first.compareTo(third)>0){
-			System.out.println("first is largest");
-		}
-		else if(second.compareTo(first)>0 && second.compareTo(third)>0) {
-			System.out.println("second is largest");
-		}
-		else
-			System.out.println("third is largest");
-	}
 	}
 
