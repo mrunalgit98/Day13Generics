@@ -8,16 +8,15 @@ public static void main(String[] args) {
 	generics obj=new generics();
 	
 	System.out.println("enter first value");
-	int first=sc.nextInt();
+	float first=sc.nextFloat();
 	
 	System.out.println("enter second value");
-	int second=sc.nextInt();
+    float second=sc.nextFloat();
 	
 	System.out.println("enter third value");
-	int third=sc.nextInt();
+	float third=sc.nextFloat();
 	
-	obj.findMax(first, second, third);
+	obj.findMaxFloat(first, second, third);
 	
-	//sc.close();
 }
 }
