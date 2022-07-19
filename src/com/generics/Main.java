@@ -18,6 +18,6 @@ public static void main(String[] args) {
 	
 	obj.findMax(first, second, third);
 	
-	//sc.close();
+	
 }
 }
