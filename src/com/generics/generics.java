@@ -41,8 +41,6 @@ package com.generics;
 				System.out.println("Third is largest");
 			return third;
 		}
-		public static <T> void printMax(T first,T second,T third,T max) {
-			System.out.printf("Max of %s,%s and %s is %s\n",first,second,third,max);
-		}
+		
 	}
 
